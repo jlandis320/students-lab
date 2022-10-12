@@ -6,9 +6,8 @@ const Students = (props) => {
         {props.students.map(student => 
         <>
           <li> {student.name} : {student.bio} </li>
-          Scores:
           {student.scores.map(score =>  
-            <li> {score.score} </li>)} 
+            <li>Scored {score.score} on {score.date} </li>)} 
         </>
         )}
       </ul>
