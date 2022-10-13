@@ -1,3 +1,5 @@
+import Score from "../Score";
+
 const Students = (props) => {
   console.log(props.students)
   return ( 
@@ -6,8 +8,8 @@ const Students = (props) => {
         {props.students.map(student => 
         <>
           <li> {student.name} : {student.bio} </li>
-          {student.scores.map(score =>  
-            <li>Scored {score.score} on {score.date} </li>)} 
+            <Score score={score}/>
+          )} 
         </>
         )}
       </ul>
